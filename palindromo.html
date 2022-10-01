@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromo</title>
+</head>
+<body>
+
+    <div class="container">
+        <p>Palíndromo é uma palavra, frase ou sequência numérica que permanece igual quando lida de trás pra frente.</p>
+        <label>Insira uma palavra e verifique se é palíndromo: </label>
+        <input type="text" value="" id="text">
+        <button type="submit" class="btn btn-primary mb-2" onclick="verifica()">verificar</button>
+      </div>
+
+    <script>
+
+        function verifica(){
+            let valortexto = document.getElementById('text').value
+
+            let verificador = valortexto.split('').reverse().join('')
+
+            if (valortexto == verificador){
+                return alert('é Palindromo')
+            }else{
+                return alert("Nao é Palindromo")
+            }
+        }            
+        
+
+    </script>
+</body>
+</html>
